@@ -8,11 +8,9 @@ export default {
 </script>
 
 <template>
-    <div class="cards">
-        <div class="prod-card">
+    <div class="prod-card">
         <img :src="details.thumb" :alt="details.series">
         <h3> {{ details.series }} </h3>
-    </div>
     </div>
 </template>
 
@@ -21,16 +19,17 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-    .cards {
-        padding: 50px 0;
-        display: flex;
+    .prod-card {
+        width: calc(100% / 6);
+        padding-right: 20px;
+        padding-bottom: 20px;
 
         img {
-        width: 150px;
-        height: 200px;
+            width: 100%;
+            height: 200px;
+            padding-bottom: 10px;
+        }
     }
-    }
-
    
 
 

@@ -92,12 +92,12 @@ export default {
 
 <template>
     <div class="container">
-        <div class="products">
-
+       
+        <div class="cards">
             <ProductCard v-for="(product, i) in products" :key="i" :details="product" />
         </div>
-
-
+        
+    
     </div>
 
 </template>
@@ -107,8 +107,10 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-    .container {
-        background-color: aqua;
+    .cards {
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 
 
