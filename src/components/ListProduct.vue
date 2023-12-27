@@ -1,6 +1,12 @@
 <script>
+import ProductCard from './ProductCard.vue';
+
 export default {
-    name: "AppMain",
+    name: "ListProduct",
+    components: {
+        ProductCard,
+    },
+
     data() {
         return {
             products: [
@@ -85,14 +91,14 @@ export default {
 </script>
 
 <template>
+    <div class="container">
+        <div class="products">
 
-    <main>
-        <div class="container">
-            
+            <ProductCard v-for="(product, i) in products" :key="i" :details="product" />
         </div>
 
 
-    </main>
+    </div>
 
 </template>
 
@@ -101,7 +107,9 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-    
+    .container {
+        background-color: aqua;
+    }
 
 
 
