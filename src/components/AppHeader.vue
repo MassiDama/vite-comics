@@ -85,8 +85,6 @@ export default {
 header {
   width: 100%;
   height: 100px;
-  background-color: aqua;
-
   .container {
     @include flex-between;
     height: 100%;
@@ -99,8 +97,6 @@ header {
       width: 100%
     }
   }
-
-
 
   ul {
     @include flex-between;
