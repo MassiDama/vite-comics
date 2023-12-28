@@ -91,17 +91,18 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-       
-        <div class="cards">
-            <ProductCard v-for="(product, i) in products" :key="i" :details="product" />
+   <section class="black-bar">
+
+        <div class="container">
+            <div class="cards">
+                <ProductCard v-for="(product, i) in products" :key="i" :details="product" />
+            </div>
+            <div class="button">
+                <a href="#"> LOAD MORE </a>
+            </div>
         </div>
-        <div class="button">
-            <a href="#"> LOAD MORE </a>
-        </div>
-        
-    
-    </div>
+
+   </section>
 
 </template>
 
@@ -110,25 +111,31 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-    .container {
-        @include column-center();
-   
-        .cards {
-            padding: 50px 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
+   .black-bar {
+        background-color: #1c1c1c;
+        color: white;
 
-        .button {
-            width: 150px;
-            padding: 10px 25px;
-            background-color: $primary;
+        .container {
+            @include column-center();
+    
+            .cards {
+                padding: 50px 0 30px;
+                display: flex;
+                flex-wrap: wrap;
+            }
 
-            a {
-                color: white;
+            .button {
+                width: 150px;
+                padding: 10px 25px;
+                background-color: $primary;
+                margin-bottom: 20px;
+
+                a {
+                    color: white;
+                }
             }
         }
-    }
 
+   }
 
 </style>
