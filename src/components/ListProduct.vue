@@ -96,6 +96,9 @@ export default {
         <div class="cards">
             <ProductCard v-for="(product, i) in products" :key="i" :details="product" />
         </div>
+        <div class="button">
+            <a href="#"> LOAD MORE </a>
+        </div>
         
     
     </div>
@@ -107,12 +110,25 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/general.scss' as *;
 
-    .cards {
-        padding: 50px 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
+    .container {
+        @include column-center();
+   
+        .cards {
+            padding: 50px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
+        .button {
+            width: 150px;
+            padding: 10px 25px;
+            background-color: $primary;
+
+            a {
+                color: white;
+            }
+        }
+    }
 
 
 </style>
