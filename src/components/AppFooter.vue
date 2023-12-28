@@ -13,23 +13,23 @@ export default {
             <div class="infobar">
                 <div class="info-item">
                     <img src="../../public/img/buy-comics-digital-comics.png" alt="">
-                    <h5> DIGITAL COMICS</h5>
+                    <h6> DIGITAL COMICS</h6>
                 </div>
                 <div class="info-item">
                     <img src="../../public/img/buy-comics-merchandise.png" alt="">
-                    <h5> DC MERCHANDISE</h5>
+                    <h6> DC MERCHANDISE</h6>
                 </div>
                 <div class="info-item">
                     <img src="../../public/img/buy-comics-subscriptions.png" alt="">
-                    <h5> SUBSCRIPTIONS</h5>
+                    <h6> SUBSCRIPTIONS</h6>
                 </div>
                 <div class="info-item">
                     <img src="../../public/img/buy-comics-shop-locator.png" alt="">
-                    <h5> COMIC SHOP LOCATOR</h5>
+                    <h6> COMIC SHOP LOCATOR</h6>
                 </div>
                 <div class="info-item">
                     <img src="../../public/img/buy-comics-digital-comics.png" alt="ciao">
-                    <h5> DC POWER VISA</h5>
+                    <h6> DC POWER VISA</h6>
                 </div>
             </div>
         </div>
@@ -37,11 +37,57 @@ export default {
 
     <section class="footer-info">
 
-         <!-- parte info section -->
+       <div class="container">
+              <!-- parte info section -->
         <div class="info-section">
-            
+            <h4> DC COMICS </h4>
+            <ul>
+                <li><a href="#"> Characters </a></li>
+                <li><a href="#"> Comics </a></li>
+                <li><a href="#"> Movies </a></li>
+                <li><a href="#"> TV </a></li>
+                <li><a href="#"> Games </a></li>
+                <li><a href="#"> Videos </a></li>
+                <li><a href="#"> News </a></li>
+            </ul>
 
+            <h4> SHOP </h4>
+            <ul>
+                <li><a href="#"> Shop DC </a></li>
+                <li><a href="#"> Shop DC Collectibles </a></li>
+            </ul>
         </div>
+
+        <!-- seconda colonna info section -->
+        <div class="info-section">
+            <h4> DC COMICS </h4>
+            <ul>
+                <li><a href="#"> Terms Of Use </a></li>
+                <li><a href="#"> Privacy policy (New) </a></li>
+                <li><a href="#"> Ad Choices </a></li>
+                <li><a href="#"> Advertising </a></li>
+                <li><a href="#"> Jobs </a></li>
+                <li><a href="#"> Subscriptions </a></li>
+                <li><a href="#"> Talent Workshops </a></li>
+                <li><a href="#"> CPSC Certificates </a></li>
+                <li><a href="#"> Ratings </a></li>
+                <li><a href="#"> Shop Help </a></li>
+                <li><a href="#"> Contact Us </a></li>
+            </ul>
+        </div>
+
+        <!-- terza colonna info section -->
+        <div class="info-section">
+            <h4> DC COMICS </h4>
+            <ul>
+                <li><a href="#"> DC </a></li>
+                <li><a href="#"> MAD Magazine </a></li>
+                <li><a href="#"> DC Kids </a></li>
+                <li><a href="#"> DC Universe </a></li>
+                <li><a href="#"> DC Power Visa </a></li>
+            </ul>
+        </div>
+       </div>
 
     </section>
 
@@ -75,7 +121,7 @@ export default {
                         padding-right: 15px;
                     }
 
-                    h5 {
+                    h6 {
                         color: white;
                     }
                 }
@@ -87,6 +133,25 @@ export default {
         background-image: url(../../public/img/footer-bg.jpg);
         width: 100%;
         height: 500px;
+        
+        .container {
+            display: flex;
+
+            .info-section {
+                padding: 30px 10px 0px 0;
+
+                h4 {
+                color: white;
+                padding: 10px 0;
+                }
+
+                a {
+                    color: $gray;
+                    font-size: 12px;
+                }
+            }
+
+        }
     }
     
 
