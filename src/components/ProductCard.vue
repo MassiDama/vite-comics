@@ -20,8 +20,7 @@ export default {
 @use '../styles/general.scss' as *;
 
     .prod-card {
-        width: calc(100% / 6);
-        padding-right: 20px;
+        width: calc((100% / 6) - 20px);
         padding-bottom: 20px;
 
         img {

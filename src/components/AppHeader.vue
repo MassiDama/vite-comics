@@ -68,7 +68,9 @@ export default {
         </div>
         <nav>
           <ul>
-            <li v-for="(link, i) in links" :key="i" > {{ link.text }}</li>
+            <li v-for="(link, i) in links" :key="i" :class="link.current ? 'active' : ''">  
+            <a :class="link.current ? 'active' : ''" href="#"> {{ link.text }} </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -98,14 +100,38 @@ header {
     }
   }
 
-  ul {
+  nav {
+    height: 100%;
+
+    ul {
     @include flex-between;
+    height: 100%;
 
     li {
       padding: 10px;
       font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      &.active {
+        border-bottom: 3px solid $primary;
+        }
+
+      a {
+        color: #787878;
+
+        &.active {
+        color: $primary;
+        }
+
+        
+      }
     }
   }
+  }
+
 }
 
 

@@ -122,6 +122,7 @@ export default {
                 padding: 50px 0 30px;
                 display: flex;
                 flex-wrap: wrap;
+                gap: 20px;
             }
 
             .button {
